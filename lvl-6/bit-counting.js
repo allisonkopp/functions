@@ -1,11 +1,10 @@
-// const countBits = n => {
-//   let counter = 0;
-//   n.split('').map(x => {
-//     if (x % 2 === 0) counter++;
-//   });
-//   return counter;
-// };
+const countBits = n => {
+  let count = 0;
+  while (n > 0) {
+    if (n % 2 === 1) count++;
+    n = Math.floor(n / 2);
+  }
+  return count;
+};
 
-const foo = [];
-foo.push('bar');
-console.log(foo);
+console.log(countBits(1234));
