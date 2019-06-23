@@ -2,16 +2,16 @@
 
 ## Codewars
 
-This folder container coding challenges taken from Codewars.
+This folder contains Codewars kata.
 
 <https://www.codewars.com/dashboard>
 
 ## Coding Challenges
 
-This folder containers miscellaneous coding challenges.
+This folder contains miscellaneous coding challenges.
 
 ## Lodash
 
-This folder container functions containers re-writes of lodash methods.
+This folder contains re-writes of lodash methods.
 
 <https://lodash.com/>
