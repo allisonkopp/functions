@@ -1,3 +1,18 @@
+//Better solution
+const dirReduc = arr => {
+  const oppositeDirections = {
+    NORTH: 'SOUTH',
+    EAST: 'WEST',
+    SOUTH: 'NORTH',
+    WEST: 'EAST'
+  };
+  return arr.reduce((acc, direction) => {
+    acc[acc.length - 1] === oppositeDirections[direction] ? acc.pop() : acc.push(direction);
+    return acc;
+  }, []);
+};
+
+//First solution
 const dirReduc = arr => {
   const oppositeDirections = [{ NORTH: 'SOUTH' }, { SOUTH: 'NORTH' }, { EAST: 'WEST' }, { WEST: 'EAST' }];
   const stack = [arr[0]];
