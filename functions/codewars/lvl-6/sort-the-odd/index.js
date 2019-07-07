@@ -1,3 +1,13 @@
+// Refactored
+const sortArray = array => {
+  const oddNumbers = array.filter(x => x % 2).sort((a, b) => (a > b ? 1 : -1));
+  array.forEach((n, i) => {
+    if (n % 2) array.splice(i, 1, oddNumbers.shift());
+  });
+  return array;
+};
+
+// First solution
 const sortArray = array => {
   const oddNumbers = [];
   array.forEach(n => {
@@ -10,4 +20,4 @@ const sortArray = array => {
   return array ? array : [];
 };
 
-sortArray([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4];
+sortArray([5, 3, 2, 8, 1, 4]); //[1, 3, 2, 8, 5, 4];
